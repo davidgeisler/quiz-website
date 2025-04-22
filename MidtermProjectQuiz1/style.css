@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Rubik:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #A6171D;
+  --secondary-color: #0C2244;
+  --accent-color: #F5C400;
+  --text-dark: #0C2244;
+  --text-light: #ffffff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  background-color: #FFFDF0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  flex: 1;
+  padding: 5rem 0;
+  background-color: #FFFDF0;
+  position: relative;
+  overflow: visible;
+}
+
+.hero h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 7rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.hero-text-block {
+  margin-top: 50px; 
+}
+
+.hero-jeepney {
+  position: absolute;
+  right: -266px;
+  top: -175px;
+  width: 1228px;
+  max-width: none;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none; 
+}
+
+.hero-wrapper > .col-lg-6:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .btn-yellow {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.hero .btn-yellow:hover {
+  background-color: #dba900;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+.btn-quiz {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 24px;
+  border: none;
+}
+
+.btn-quiz:hover {
+  background-color: #870d14;
+}
+
+/* FOOTER */
+.footer-section {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .navbar .btn-quiz {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero-jeepney {
+    max-height: 200px;
+  }
+}
