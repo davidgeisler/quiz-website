@@ -1,0 +1,231 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Rubik:wght@400;700&display=swap');
+
+/* ===== ROOT COLORS FROM YOUR DESIGN SYSTEM ===== */
+:root {
+  --primary-color: #A6171D;    /* Red */
+  --secondary-color: #0C2244;  /* Navy Blue */
+  --accent-color: #F5C400;     /* Golden Yellow */
+  --text-dark: #0C2244;
+  --text-light: #ffffff;
+  --border-radius: 16px;
+  --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #FFFDF0;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+h1.section-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4rem;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+.btn-quiz {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 24px;
+  border: none;
+}
+
+.btn-quiz:hover {
+  background-color: #870d14;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  padding: 5rem 0;
+  background-color: #FFFDF0;
+  position: relative;
+  overflow: visible;
+}
+
+.hero h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 7rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.hero-text-block {
+  margin-top: 50px; 
+}
+
+
+.hero-jeepney {
+  position: absolute;
+  right: -266px;
+  top: -175px;
+  width: 1228px;
+  max-width: none;
+  z-index: 0;
+  opacity: 0.9;
+  pointer-events: none; 
+}
+
+.hero-wrapper > .col-lg-6:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .btn-yellow {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+.hero .btn-yellow:hover {
+  background-color: #dba900;
+}
+
+@media (max-width: 992px) {
+  .hero-jeepney {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    transform: none;
+    opacity: 1;
+  }
+
+  .quiz-section {
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+}
+
+/* ===== QUIZ CATEGORIES ===== */
+.quiz-section {
+  padding: 4rem 2rem;
+  background-color: #fffdf000;
+  position: relative;
+  z-index: 3;
+}
+
+.quiz-card {
+  background-color: var(--primary-color); 
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.quiz-card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.quiz-card .card-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  color:var(--text-light);
+}
+
+.quiz-card .card-body {
+  padding: 1rem;
+  color: var(--text-light);
+}
+
+
+.quiz-card .btn {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+}
+
+.quiz-card .btn:hover {
+  background-color: #d9a700;
+}
+
+/* ===== FOOTER ===== */
+.footer-section {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar .btn-quiz {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .quiz-card {
+    margin-bottom: 2rem;
+  }
+}
